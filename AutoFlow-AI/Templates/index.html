@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AutoFlow AI | Smart Automation</title>
+
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2>✦ AutoFlow AI</h2>
+
+    <p class="muted">SMART AUTOMATION</p>
+
+    <nav>
+      <a class="active" href="#dashboard">▦ Dashboard</a>
+      <a href="#processor">✧ Process Enquiries</a>
+      <a href="#tasks">✓ Tasks</a>
+      <a href="#results">☷ Activity Log</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <span class="status-dot"></span>
+      Automation demo ready
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main id="dashboard">
+
+    <!-- HEADER -->
+    <header>
+
+      <div>
+        <p class="muted">WORKSPACE / OVERVIEW</p>
+
+        <h1>Automation Dashboard</h1>
+
+        <p>
+          Turn repetitive work into automated workflows.
+        </p>
+      </div>
+
+      <span class="pill">● System ready</span>
+
+    </header>
+
+
+    <!-- STATISTICS -->
+    <section class="stats">
+
+      <article class="stat-card">
+        <p>Total enquiries</p>
+        <h2 id="total">0</h2>
+      </article>
+
+      <article class="stat-card">
+        <p>High priority</p>
+        <h2 id="urgent">0</h2>
+      </article>
+
+      <article class="stat-card">
+        <p>Tasks assigned</p>
+        <h2 id="assigned">0</h2>
+      </article>
+
+      <article class="stat-card">
+        <p>Responses drafted</p>
+        <h2 id="drafted">0</h2>
+      </article>
+
+    </section>
+
+
+    <!-- PROCESS ENQUIRY -->
+    <section class="panel" id="processor">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Process a customer enquiry</h2>
+
+          <p>
+            Enter a message and let AutoFlow organize it.
+          </p>
+        </div>
+
+        <span class="pill">WORKFLOW 01</span>
+
+      </div>
+
+
+      <label for="enquiry">
+        Customer message
+      </label>
+
+
+      <textarea
+        id="enquiry"
+        rows="4"
+        placeholder="Example: I was charged twice for my order and need a refund."
+      ></textarea>
+
+
+      <div class="actions">
+
+        <button id="processBtn">
+          ✦ Automate enquiry
+        </button>
+
+        <button id="sampleBtn" class="secondary">
+          Try sample
+        </button>
+
+      </div>
+
+
+      <p
+        id="message"
+        class="muted"
+        aria-live="polite"
+      ></p>
+
+    </section>
+
+
+    <!-- WORKFLOW RESULTS -->
+    <section class="panel" id="results">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Workflow results</h2>
+
+          <p>
+            Review the classification and suggested next steps.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- EMPTY RESULT -->
+      <div id="emptyState">
+
+        <div class="empty-icon">
+          ↗
+        </div>
+
+        <h3>
+          No enquiries processed yet
+        </h3>
+
+        <p>
+          Enter a customer message above to see automation in action.
+        </p>
+
+      </div>
+
+
+      <!-- RESULT -->
+      <div id="result" hidden>
+
+        <div class="result-grid">
+
+          <div class="result-item">
+            <p>Category</p>
+            <h3 id="category">—</h3>
+          </div>
+
+          <div class="result-item">
+            <p>Priority</p>
+            <h3 id="priority">—</h3>
+          </div>
+
+          <div class="result-item">
+            <p>Assigned team</p>
+            <h3 id="team">—</h3>
+          </div>
+
+          <div class="result-item">
+            <p>Status</p>
+            <h3 id="taskStatus">—</h3>
+          </div>
+
+        </div>
+
+
+        <div class="reply-box">
+
+          <h3>
+            Suggested response
+          </h3>
+
+          <p id="reply"></p>
+
+          <p class="muted">
+            Draft only — review before sending to a customer.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- RECENT ACTIVITY -->
+      <h3 class="history-title">
+        Recent activity
+      </h3>
+
+      <div id="history">
+
+        <p class="muted">
+          Your processed enquiries will appear here.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- TASK MANAGEMENT -->
+    <section class="panel" id="tasks">
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>
+            Enquiries & Tasks
+          </h2>
+
+          <p>
+            Manage automated enquiries and update their workflow status.
+          </p>
+
+        </div>
+
+        <span class="pill">
+          WORKFLOW 02
+        </span>
+
+      </div>
+
+
+      <!-- TASK LIST -->
+      <div id="taskList">
+
+        <p class="muted">
+          No tasks available yet.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      AutoFlow AI · Build to Ship Hackathon Prototype
+    </footer>
+
+  </main>
+
+
+  <script src="../static/script.js"></script>
+
+</body>
+
+</html>
